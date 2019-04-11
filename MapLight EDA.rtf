@@ -1,6 +1,6 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
-}
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica-Oblique;\f4\fmodern\fcharset0 Courier;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red0\green0\blue0;\red255\green255\blue255;
 }
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
@@ -8,26 +8,279 @@
 \margl1440\margr1440\vieww20560\viewh15300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 MapLight EDA:\
+\f0\fs24 \cf0 Revised analysis: Model that predicts how candidate will vote based on the industries/ companies that are contributing to them\
+Compare success of model vs. pure partisan predictor\
+MapLight\'92s Data from Federal Election Commission\
+\
+Jon Kyl as AZ Senator instead of John McCain??\
+Brian Schatz replaced Inouye as HI Senator in 2012\
+Jeffrey Chelsa replaced Frank Lautenberg as NJ Senator in 2013\
+Tim Scott replaced Jim DeMint as NC Senator in 2013\
+Thad Cochran resigned in early 2018. Removed from 2018 list.\
+\
+Top oil industry contributors:\
+See {\field{\*\fldinst{HYPERLINK "https://www.opensecrets.org/industries/indus.php?cycle=All&ind=E01"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://www.opensecrets.org/industries/indus.php?cycle=All&ind=E01}}
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone Also interesting: {\field{\*\fldinst{HYPERLINK "https://www.opensecrets.org/pacs/industry.php?txt=E01&cycle=2018"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul https://www.opensecrets.org/pacs/industry.php?txt=E01&cycle=2018}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9360\tx10082\ri-5107\pardirnatural\partightenfactor0
+\cf0 							\ul DonorOrganization\ulnone 			\ul DonorCommitteeNameNormalized\ulnone \
+Koch Industries	  	$10,538,473		'koch industries' [2]	        				
+\f2\b 'koch\'92
+\f0\b0 \
+Marathon Petroleum	$6,252,314		'marathon petroleum' [4], \'91marathon oil\'92 [1]	
+\f2\b \'91marathon petroleum\'92, \'91marathon oil\'92
+\f0\b0 \
+Chevron Corp	  	$5,098,240		\'91
+\f2\b Chevron
+\f0\b0 \'92 [4] - exact string match to refine	\'91chevron\'92\
+Stewart & Stevenson	$3,486,344		\'91
+\f2\b Stewart & Stevenson
+\f0\b0 \'92 [1]				
+\f3\i Skip in DonorCmt\'85
+\f0\i0 \
+Crownquest Operating	$2,533,700		\'91
+\f2\b Crownquest
+\f0\b0 \'92 [5]					
+\f3\i Skip in DonorCmt\'85
+\f0\i0  \
+Pilot Corp	 		$1,962,954		
+\f2\b 'Pilot Corp', case=True
+\f0\b0  [1]. Unassociated \'91Timepilot\'92 otherwise     
+\f3\i Skip in DonorCmt\'85
+\f0\i0  \
+Berexco Inc	  		$1,844,525		
+\f2\b \'91Berexco
+\f0\b0 \'92 [2]						
+\f3\i Skip in DonorCmt\'85
+\f0\i0 \
+Energy Transfer Equity	$1,840,908		\'91Energy Transfer\'92 [7]. Exact string match to get only 1       
+\f2\b  \'91Energy Transfer\'92
+\f0\b0 \
+Exxon Mobil	  		$1,811,645		'exxonmobil' [2]					
+\f2\b \'91exxon\'92
+\f0\b0 \
+Occidental Petroleum	$1,774,557		'occidental petroleum' [8]				
+\f2\b \'91occidental\'92
+\f0\b0 \
+ConocoPhillips	  	$1,668,263		conocophillips [1]					
+\f2\b 'conoco'
+\f0\b0 \
+Phillips 66						'phillips 66' [1]					
+\f2\b \'91phillips 66\'92
+\f0\b0 \
+Valero Services	  	$1,502,814		\'91valero\'92 [12]						
+\f3\i Skip in DonorCmt\'85
+\f0\i0 \
+Valero Energy	  	$1,490,829		
+\f3\i Skip in DonorOrg\'85					
+\f2\i0\b \'91valero\'92
+\f0\b0 \
+Continental Resources	$1,414,300		
+\f2\b 'continental resources'
+\f0\b0  [1]		
+\f3\i 'continental resources' doesn\'92t work in 2012
+\f0\i0 \
+Edison Chouest Offshore	$960,369		
+\f2\b 'Edison Chouest'
+\f0\b0  [1]				
+\f3\i Skip in DonorCmt\'85
+\f0\i0 \
+Otis Eastern	  		$1,105,908		
+\f2\b 'otis eastern'
+\f0\b0  [1]					
+\f3\i Skip in DonorCmt\'85
+\f0\i0 \
+
+\f3\i Geosouthern Energy	$1,031,745		'geosouthern' [3] doesn\'92t work in 2012		Skip in DonorCmt\'85\
+Red Apple Group	 doesn\'92t look relevant	'red apple' [2]						Skip in DonorCmt\'85\
+Magnolia Oil & Gas	  	$1,769,829		'magnolia oil' [4] doesn\'92t work in 2012		Skip in DonorCmt\'85\
+UOP Russell	  		$1,720,483		Skip in DonorOrg\'85					Skip in DonorCmt\'85\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+Top coal industry contributors:\
+See: {\field{\*\fldinst{HYPERLINK "https://www.opensecrets.org/pacs/category.php?txt=E1210&cycle=2018"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul https://www.opensecrets.org/pacs/category.php?txt=E1210&cycle=2018}}
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul  
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone for coal mining\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9357\tx10072\tx10794\pardirnatural\partightenfactor0
+\cf0 PAC Name				Total		Dems		Repubs	\ul \ulc0 DonorOrganization\ulnone 		\ul DonorCommitteeNameNormalized\ulnone \
+Alliance Coal	     			$273,450	$0		$273,450	\'91
+\f2\b alliance coal\'92 & \'91alliance resource
+\f0\b0 \'92        \'91alliance coal\'92 \
+Arch Coal				$130,000	$15,000	$115,000	\'91arch coal\'92			
+\f2\b \'91arch coal\'92
+\f0\b0 \
+Cloud Peak Energy Resources	$37,500	$2,500	$35,000	\'91cloud peak energy\'92		
+\f2\b \'91cloud peak energy\'92
+\f0\b0 \
+Drummond Co			$45,500	$7,500	$38,000	'drummond company'	
+\f2\b 'drummond company'
+\f0\b0 \
+Lignite Energy Council		$34,500	$10,000	$24,500	\'91lignite energy\'92		
+\f2\b \'91lignite energy\'92
+\f0\b0 \
+Murray Energy			$105,700	$0		$105,700	'
+\f2\b murray energy
+\f0\b0 ' [6]		'murray energy'\
+North American Coal Corp		$33,500	$0		$33,500	'north american coal'	
+\f2\b 'north american coal'
+\f0\b0 \
+Ohio Coal Assn			$10,200	$0		$10,200	'ohio coal' [3]			
+\f2\b 'ohio coal'
+\f0\b0  \
+Peabody				$73,000	$19,500	$53,500	'peabody energy'		'
+\f2\b peabody energy'
+\f0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9357\tx10072\tx10794\pardirnatural\partightenfactor0
+
+\f3\i \cf0 Aloe Holding				$3,700	$0		$3,700	Skip in DonorOrg\'85		Skip in DonorCmt\'85\
+Contura Energy			$72,000	$2,000	$70,000	\'91contura energy\'92 [2]		\'91contra energy\'92\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9357\tx10072\tx10794\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 General mining contributors:\
+See: {\field{\*\fldinst{HYPERLINK "https://www.opensecrets.org/pacs/industry.php?txt=E04&cycle=2018"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://www.opensecrets.org/pacs/industry.php?txt=E04&cycle=2018}}
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2  
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone for coal mining\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9361\tx10075\tx10803\pardirnatural\partightenfactor0
+\cf0 \ul PAC Name\ulnone 			\ul Total\ulnone 		\ul Dems\ulnone 		\ul Repubs\ulnone 	\ul \ulc0 DonorOrganization\ulnone 		\ul DonorCommitteeNameNormalized\ulnone \
+National Mining Assn	$218,500	$7,500	$211,000	\'91
+\f2\b national mining
+\f0\b0 \'92 [2]	\'91national mining\'92  [2] - coalpac & minepac\
+Freeport-McMoRan		$129,500	$22,000	$107,500	\'91
+\f2\b freeport mcmoran
+\f0\b0 \'92		\'91freeport\'92\
+Barrick Goldstrike Mines	$61,000	$29,000	$32,000	\'91barrick gold\'92 [2]		
+\f2\b \'91barrick gold\'92
+\f0\b0 \
+Cleveland-Cliffs		$59,500	$31,500	$28,000'cliffs natural' & \'91cleveland-cliffs\'92	
+\f2\b \'91cliffs natural\'92
+\f0\b0 \
+Newmont Mining		$53,000	$24,500	$28,500	\'92newmont\'92			
+\f2\b \'91newmont\'92
+\f0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9361\tx10075\tx10803\pardirnatural\partightenfactor0
+
+\f3\i \cf0 Coeur Mining			$107,500	$21,500	$85,000	\'91coeur mining\'92		\'91coeur\'92
+\f0\i0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Environmental Organizations:\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.opensecrets.org/industries/contrib.php?cycle=2018&ind=Q11"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://www.opensecrets.org/industries/contrib.php?cycle=2018&ind=Q11}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9353\tx10080\tx10796\pardirnatural\partightenfactor0
+\cf0 PAC Name			Total		Dem%	DonorOrganization		\ul DonorCommitteeNameNormalized\ulnone \
+League of Conserv Voters	$2,939,816	98.9%	   \'91league of conservation\'92 - [3]	\'91
+\f2\b league of conservation
+\f0\b0 \'92 - [3]\
+Sierra Club			$457,064	99.0%		\'91sierra club\'92			
+\f2\b \'91sierra club\'92
+\f0\b0  [DonorOrg performs well too]\
+Nature Conservancy	$102,000	97.3%		\'91
+\f2\b nature conservancy
+\f0\b0 \'92	\
+Environmental Defense F	$60K			     \'91
+\f2\b environmental defense
+\f0\b0 \'92-[3]	\'91environmental defense\'92 [DonorCmt performs well too]\
+Global Green USA		$150,670	100.0%	\'91
+\f2\b global green usa
+\f0\b0 \'92\
+Environment America	$50,400		100.0%	\'91
+\f2\b environment america
+\f0\b0 \'92	\'91environment america\'92 - bigger in 2018??\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9353\tx10080\tx10796\pardirnatural\partightenfactor0
+
+\f3\i \cf0 NextGen Climate Action	$1,850	100.0%				\'91nextgen climate\'92 - bigger in 2018??\
+ClearPath Action		$8,400	0%\
+Environmental Action	$400,000	$0		\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9353\tx10080\tx10796\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Interesting questions:\
+-Do voting patterns change over time due to donations?\
+-Which PACs have the best record of choosing winning candidates?\
+-Which companies have employees whose politics are most aligned with the company\'92s PAC? Least aligned?\
+-Create a machine learning model to understand which political issues are most important to a donor organization, per the candidate they donate to\
+\
+MapLight EDA:\
 1. cand0.csv\
 cand0-9 look largely the same, but cand9 only has 175975 rows. Total of 4,175,975 rows by 81 columns.\
 2. NRA Grades from {\field{\*\fldinst{HYPERLINK "https://everytown.org/nra-grades-archive/"}}{\fldrslt 
 \f1 \cf2 \expnd0\expndtw0\kerning0
-\ul \ulc2 \outl0\strokewidth0 \strokec2 https://everytown.org/nra-grades-archive/}}
+\ul \ulc2 https://everytown.org/nra-grades-archive/}}
 \f1 \cf2 \expnd0\expndtw0\kerning0
-\ul \ulc2 \outl0\strokewidth0 \strokec2 \
+\ul \ulc2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone \outl0\strokewidth0 Grades date back to 2009.\
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone Grades date back to 2009.\
 Using tautological inference here??\
+3. For 2018, there are ~2800 unique RecipientCandidateNameNormalized names, 4396 unique DonorCommitteeNameNormalized names, and 446329 unique DonorOrganization names.\
+   There are 3 RecipientCommitteeType names, Senate, House, Presidential.\
+For 2016, there are 2230 unique RecipientCandidateNameNormalized names, 4342 unique DonorCommitteeNameNormalized fields, and 628603 unique DonorOrganization names.\
+   There are 4 RecipientCommitteeType names, Senate, House, Presidential, and PAC - Nonqualified\
+For 2014, there are 2254 unique RecipientCandidateNameNormalized names, 4360 unique DonorCommitteeNameNormalized fields, and 277395 unique DonorOrganization names.\
+   There are 3 RecipientCommitteeType names, Senate, House, Presidential\
+For 2012, there are 2548 unique RecipientCandidateNameNormalized names, 4473 unique DonorCommitteeNameNormalized fields, and 542867 unique DonorOrganization names.\
+   There are 4 RecipientCommitteeType names, Senate, House, Presidential, and PAC - Nonqualified\
+\
+TransactionAmount and Counts don\'92t match between DonorOrganization groups and DonorCommitteeNameNormalized groups. The reason seems to be that there are several more NaN values for DonorCommitteeNameNormalized, especially in 2012.\
+For 2012, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 5.88 for TransactionAmount.\
+For 2012, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 7.73 for Count.\
+For 2014, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 3.07 for TransactionAmount.\
+For 2014, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 3.52 for Count.\
+For 2016, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 4.34 for TransactionAmount.\
+For 2016, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 4.09 for Count.\
+For 2018, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 2.94 for TransactionAmount.\
+For 2018, ratio of DonorOrganization groups to DonorCommitteeNameNormalized groups is 1.72 for Count.\
+\
+2018 TOTALS, 	DonorOrganization, Transaction Amount: 2,946,918,545 \
+			DonorCommitteeNameNormalized, Transaction Amount: 1,002,036,563\
+			DonorOrganization, Total Count: 4,675,798\
+			DonorCommitteeNameNormalized, Total Count: 2,724,102\
+\
+2016 TOTALS, 	DonorOrganization, Transaction Amount: 3,162,836,540 \
+			DonorCommitteeNameNormalized, Transaction Amount: 728,536,691\
+			DonorOrganization, Total Count: 8,411,713\
+			DonorCommitteeNameNormalized, Total Count: 2,054,280\
+\
+2014 TOTALS, 	DonorOrganization, Transaction Amount: 1,683,677,372 \
+			DonorCommitteeNameNormalized, Transaction Amount: 548,556,910\
+			DonorOrganization, Total Count: 1,320,259\
+			DonorCommitteeNameNormalized, Total Count: 374,774\
+\
+2012 TOTALS, 	DonorOrganization, Transaction Amount: 3,002,613,621 (vs. 3,009,124,879 in original data)\
+			DonorCommitteeNameNormalized, Transaction Amount: 510,063,246\
+			DonorOrganization, Total Count: 2,575,448\
+			DonorCommitteeNameNormalized, Total Count: 333,277\
+\
+ACTBLUE dominates donations in this data. Is this data set accurate? I couldn\'92t find any way to break out the ACTBLUE donations to the specific groups they\'92re from.\
+On another strange note, the NRA donations seem to be unusually low for this data set. Only $710,050 in donations from 513 people (per \'91DonorOrganization\'92) in 2018. Only a bit higher in 2016.\
 \
 \pard\pardeftab720\sl320\partightenfactor0
 
-\f2\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\f4\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
 ReportingCommitteeNameNormalized\
 TransactionDate
 \f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 
-\f2\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\f4\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
 TransactionAmount\
 RecipientNameNormalized\
 RecipientCommitteeNameNormalized \
@@ -38,9 +291,8 @@ DonorNameNormalized\
 DonorCommitteeNameNormalized\
 
 \f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\sl320\partightenfactor0
 
-\f2\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\f4\fs28 \cf3 \cb4 \expnd0\expndtw0\kerning0
 RangeIndex: 500000 entries, 0 to 499999\
 Data columns (total 81 columns):\
 TransactionTypeCode                  500000 non-null object, e.g., \'9324K\'94\
@@ -49,7 +301,7 @@ ElectionCycle                        500000 non-null int64, ie, 2018\
 ReportingCommitteeMLID               500000 non-null int64, e.g., 628379\
 ReportingCommitteeFECID              500000 non-null object, e.g., C00000059\
 ReportingCommitteeName               500000 non-null object, e.g., HALLMARK CARDS PAC\
-ReportingCommitteeNameNormalized     500000 non-null object\cf3 \cb4 , e.g., HALLMARK CARDS PAC\cf3 \cb4 \
+ReportingCommitteeNameNormalized     500000 non-null object, e.g., HALLMARK CARDS PAC\
 PrimaryGeneralIndicator              499966 non-null object, e.g., P\
 TransactionID                        499996 non-null object, e.g., 14724511\
 FileNumber                           500000 non-null int64, e.g., 1153529\
@@ -63,10 +315,10 @@ RecipientCity                        499910 non-null object, e.g., HENDERSONVILL
 RecipientState                       499888 non-null object, e.g., NC\
 RecipientZipCode                     499854 non-null object, e.g., 28793\
 RecipientEmployer                    0 non-null float64 - NaN\
-RecipientEmployerNormalized          0 non-null float64 \cf3 \cb4 - NaN\cf3 \cb4 \
-RecipientOccupation                  0 non-null float64 \cf3 \cb4 - NaN\cf3 \cb4 \
-RecipientOccupationNormalized        0 non-null float64 \cf3 \cb4 - NaN\cf3 \cb4 \
-RecipientOrganization                0 non-null float64 \cf3 \cb4 - NaN\cf3 \cb4 \
+RecipientEmployerNormalized          0 non-null float64 - NaN\
+RecipientOccupation                  0 non-null float64 - NaN\
+RecipientOccupationNormalized        0 non-null float64 - NaN\
+RecipientOrganization                0 non-null float64 - NaN\
 RecipientEntityTypeCode              500000 non-null int64, e.g., 5\
 RecipientEntityType                  170321 non-null object, e.g., Candidate Committee\
 RecipientCommitteeMLID               500000 non-null int64, e.g., 6298918\
@@ -84,29 +336,29 @@ RecipientCandidatePoliticianID       500000 non-null int64, e.g., 1776\
 RecipientCandidateFECID              500000 non-null object, e.g., H2NC11080\
 RecipientCandidateName               500000 non-null object, e.g., MEADOWS, MARK R\
 RecipientCandidateNameNormalized     500000 non-null object, e.g., Mark R Meadows\
-RecipientCandidateParty              499997 non-null object\cf3 \cb4 , e.g., Republican\cf3 \cb4 \
+RecipientCandidateParty              499997 non-null object, e.g., Republican\
 RecipientCandidateICO                456725 non-null object, e.g., Incumbent\
 RecipientCandidateStatus             460696 non-null object, e.g., No Status\
 RecipientCandidateOfficeState        500000 non-null object, e.g., NC\
 RecipientCandidateOffice             500000 non-null object, e.g., House\
 RecipientCandidateDistrict           273097 non-null float64, e.g., 11.0\
 RecipientCandidateGender             374939 non-null object, e.g., M\
-DonorName                            499351 non-null object, e.g., \cf3 \cb4 HALLMARK CARDS PAC\cf3 \cb4 \
-DonorNameNormalized                  499351 non-null object, e.g., \cf3 \cb4 HALLMARK CARDS PAC\cf3 \cb4 \
+DonorName                            499351 non-null object, e.g., HALLMARK CARDS PAC\
+DonorNameNormalized                  499351 non-null object, e.g., HALLMARK CARDS PAC\
 DonorCity                            499900 non-null object, e.g., KANSAS CITY\
 DonorState                           499640 non-null object, e.g., MO\
 DonorZipCode                         499837 non-null object, e.g., 64108\
 DonorEmployer                        258341 non-null object, e.g., SELF-EMPLOYED (lots of NaN)\
-DonorEmployerNormalized              318491 non-null object, \cf3 \cb4 e.g., SELF-EMPLOYED (lots of NaN)\cf3 \cb4 \
-DonorOccupation                      318629 non-null object, \cf3 \cb4 e.g., RETIRED (lots of NaN)\cf3 \cb4 \
-DonorOccupationNormalized            318966 non-null object, e.g., Retired \cf3 \cb4 (lots of NaN)\cf3 \cb4 \
+DonorEmployerNormalized              318491 non-null object, e.g., SELF-EMPLOYED (lots of NaN)\
+DonorOccupation                      318629 non-null object, e.g., RETIRED (lots of NaN)\
+DonorOccupationNormalized            318966 non-null object, e.g., Retired (lots of NaN)\
 DonorOrganization                    499939 non-null object, e.g., Hallmark Cards\
 DonorEntityTypeCode                  500000 non-null int64, e.g., 0\
 DonorEntityType                      329679 non-null object, e.g., Individual\
 DonorCommitteeMLID                   500000 non-null int64, e.g., 6289379\
 DonorCommitteeFECID                  383744 non-null object, e.g., C00000059\
-DonorCommitteeName                   383590 non-null object, \cf3 \cb4 e.g., HALLMARK CARDS PAC\cf3 \cb4 \
-DonorCommitteeNameNormalized         383590 non-null object, \cf3 \cb4 e.g., HALLMARK CARDS PAC\cf3 \cb4 \
+DonorCommitteeName                   383590 non-null object, e.g., HALLMARK CARDS PAC\
+DonorCommitteeNameNormalized         383590 non-null object, e.g., HALLMARK CARDS PAC\
 DonorCommitteeTreasurer              383590 non-null object, e.g., SARAH MOE\
 DonorCommitteeDesignationCode        383590 non-null object, e.g., U\
 DonorCommitteeDesignation            383590 non-null object, e.g., Unauthorized\
@@ -117,13 +369,12 @@ DonorCandidateMLID                   500000 non-null int64, e.g., 0\
 DonorCandidateFECID                  2579 non-null object, mostly NaN\
 DonorCandidateName                   500000 non-null int64, e.g., 0\
 DonorCandidateNameNormalized         2579 non-null object, mostly NaN\
-DonorCandidateParty                  2022 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateICO                    2015 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateStatus                 2022 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateOfficeState            2579 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateOffice                 2579 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateDistrict               2012 non-null float64\cf3 \cb4 , mostly NaN\cf3 \cb4 \
-DonorCandidateGender                 2199 non-null object\cf3 \cb4 , mostly NaN\cf3 \cb4 \
+DonorCandidateParty                  2022 non-null object, mostly NaN\
+DonorCandidateICO                    2015 non-null object, mostly NaN\
+DonorCandidateStatus                 2022 non-null object, mostly NaN\
+DonorCandidateOfficeState            2579 non-null object, mostly NaN\
+DonorCandidateOffice                 2579 non-null object, mostly NaN\
+DonorCandidateDistrict               2012 non-null float64, mostly NaN\
+DonorCandidateGender                 2199 non-null object, mostly NaN\
 dtypes: float64(7), int64(14), object(60)\
-memory usage: 309.0+ MB\
-}
+memory usage: 309.0+ MB}
